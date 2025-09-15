@@ -20,56 +20,86 @@
 
 // ================= Loader Text =================
 (() => {
+  // Phrases
   const texts = [
     "Threads of Tradition",
     "Crafted with Care",
     "Loomed to Perfection",
     "Elegance in Every Fiber"
   ];
-  
-  let textIndex = 0;
+
   const loader = document.getElementById("loader");
-  const textElement = document.getElementById("loading-text");
+  const textEl = document.getElementById("loading-text");
 
-  window.addEventListener("load", () => {
-    if (!loader || !textElement) return;
+  // Show immediately (only during load time)
+  // If loader is initially display:none in CSS, force it on here
+  if (loader) loader.style.display = "flex";
 
-    // Check if already shown
-    if (localStorage.getItem("loaderShown")) {
-      loader.style.display = "none";
-      document.body.style.overflow = "auto";
-      return;
+  // Lock scroll while visible (prevents background interaction)
+  let scrollYForRestore = 0;
+  const lockScroll = () => {
+    scrollYForRestore = window.scrollY || 0;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollYForRestore}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
+  };
+  const unlockScroll = () => {
+    const top = parseInt(document.body.style.top || "0", 10) || 0;
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.width = "";
+    window.scrollTo(0, -top);
+  };
+
+  if (loader) lockScroll();
+
+  // Start smooth phrase rotation immediately
+  if (loader && textEl) {
+    const cycleMs = 1000; // per phrase
+    const fadeMs  = 500;  // fade duration
+    let idx = 0;
+    textEl.textContent = texts[idx];
+    textEl.style.opacity = "1";
+
+    let startTime = 0;
+    let lastSwapCycle = -1;
+    let rafId = null;
+
+    function tick(now) {
+      if (!startTime) startTime = now;
+      const elapsed = now - startTime;
+      const cycleNum = Math.floor(elapsed / cycleMs);
+      const cycleTime = elapsed % cycleMs;
+
+      if (cycleTime <= fadeMs) {
+        const t = cycleTime / fadeMs;
+        textEl.style.opacity = String(1 - t);
+      } else {
+        if (cycleNum !== lastSwapCycle) {
+          idx = (idx + 1) % texts.length;
+          textEl.textContent = texts[idx];
+          lastSwapCycle = cycleNum;
+        }
+        const tIn = Math.min(cycleTime - fadeMs, fadeMs) / fadeMs;
+        textEl.style.opacity = String(tIn);
+      }
+      rafId = requestAnimationFrame(tick);
     }
+    requestAnimationFrame(tick);
 
-    // Mark as shown
-    localStorage.setItem("loaderShown", "true");
-
-    // Show loader
-    loader.style.display = "flex";
-    document.body.style.overflow = "hidden";
-
-    // Function to change text with fade
-    const changeText = () => {
-      textElement.style.opacity = 0;
-      setTimeout(() => {
-        textElement.innerText = texts[textIndex];
-        textElement.style.opacity = 1;
-        textIndex = (textIndex + 1) % texts.length;
-      }, 500);
-    };
-
-    // Start text animation
-    changeText();
-    const interval = setInterval(changeText, 1000);
-
-    // Hide loader after 6 seconds
-    setTimeout(() => {
-      clearInterval(interval);
+    // Hide strictly on load complete so it only shows during page loading
+    window.addEventListener("load", () => {
+      if (rafId) cancelAnimationFrame(rafId);
       loader.style.display = "none";
-      document.body.style.overflow = "auto";
-    }, 6000);
-  });
+      unlockScroll();
+    }, { once: true });
+  }
 })();
+
 // ================= Mobile Nav Toggle =================
 (() => {
   const ham = document.querySelector(".ham");
