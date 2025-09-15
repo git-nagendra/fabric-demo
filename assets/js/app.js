@@ -26,6 +26,7 @@
     "Loomed to Perfection",
     "Elegance in Every Fiber"
   ];
+  
   let textIndex = 0;
   const loader = document.getElementById("loader");
   const textElement = document.getElementById("loading-text");
@@ -33,17 +34,21 @@
   window.addEventListener("load", () => {
     if (!loader || !textElement) return;
 
-    // Already shown?
+    // Check if already shown
     if (localStorage.getItem("loaderShown")) {
       loader.style.display = "none";
       document.body.style.overflow = "auto";
       return;
     }
 
+    // Mark as shown
     localStorage.setItem("loaderShown", "true");
+
+    // Show loader
     loader.style.display = "flex";
     document.body.style.overflow = "hidden";
 
+    // Function to change text with fade
     const changeText = () => {
       textElement.style.opacity = 0;
       setTimeout(() => {
@@ -53,10 +58,11 @@
       }, 500);
     };
 
+    // Start text animation
     changeText();
     const interval = setInterval(changeText, 1000);
 
-    // Hide after 6s
+    // Hide loader after 6 seconds
     setTimeout(() => {
       clearInterval(interval);
       loader.style.display = "none";
@@ -64,7 +70,6 @@
     }, 6000);
   });
 })();
-
 // ================= Mobile Nav Toggle =================
 (() => {
   const ham = document.querySelector(".ham");
