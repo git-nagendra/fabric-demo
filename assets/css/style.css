@@ -2535,7 +2535,7 @@ body.no-scroll {
   font-size: 24px;
   font-weight: 600;
   color: #e01d47;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
