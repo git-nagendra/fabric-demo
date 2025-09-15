@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greatex Synthetics Pvt Ltd</title>
+
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/Favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/Favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/Favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/images/Favicon/site.webmanifest" />
+
+    <!-- style css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- fonts family -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- swiper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="">
+      <!-- Top Contact Bar -->
+      <div
+        class="top-bar about_header d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" style="color: #fff; text-decoration: none">
+          <div class="logo">
+            <div class="logo_inner">
+              <img src="./assets/images/gratexlogo.png" alt="gratex logo" />
+            </div>
+            <div class="logo_text">
+              <h2>Greatex</h2>
+              <small>Synthetics Pvt Ltd.</small>
+            </div>
+          </div>
+        </a>
+        <div class="ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div> -->
+      </div>
+
+      <!-- Navigation Bar -->
+      <div class="nav-bar">
+        <nav>
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="#">Catalogue</a></li>
+            <li class="has-submenu">
+              <a href="all-product.html"
+                >Product <i class="fa-solid fa-angle-down ms-1"></i
+              ></a>
+              <ul class="submenu m-0 p-0">
+                <li><a href="#">Polyester Fabrics</a></li>
+                <li><a href="#">Cotton Fabrics</a></li>
+                <li><a href="#">Blended Fabrics</a></li>
+                <li><a href="#">Specialty Fabrics</a></li>
+              </ul>
+            </li>
+            <li><a href="Contact.html">Contact us</a></li>
+          </ul>
+          <div class="quote_wrapper">
+            <div class="quote-btn">
+              <i class="fa-brands fa-whatsapp"></i> Get Quote
+            </div>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="banner___">
+      <img src="./assets/images/Gratex1.png" class="img-fluid" alt="Fabric Image">
+    </div>
+
+    <div class="container py-5">
+      <div class="row">
+        <!-- Filter Sidebar -->
+        <div class="col-md-3 filter-section">
+          <h6><strong>Product</strong></h6>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="thread" />
+            <label class="form-check-label" for="thread">Thread</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="elastic" />
+            <label class="form-check-label" for="elastic">Elastic</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="ropes" />
+            <label class="form-check-label" for="ropes">Ropes / Cords</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="tape" />
+            <label class="form-check-label" for="tape"
+              >Tape / Strap / Webbing</label
+            >
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="madeups" />
+            <label class="form-check-label" for="madeups">Made ups</label>
+          </div>
+
+          <h6 class="mt-4"><strong>Material</strong></h6>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="cotton" />
+            <label class="form-check-label" for="cotton">Cotton</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="polyester" />
+            <label class="form-check-label" for="polyester">Polyester</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="polypropylene"
+            />
+            <label class="form-check-label" for="polypropylene"
+              >Polypropylene</label
+            >
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="polyethylene" />
+            <label class="form-check-label" for="polyethylene"
+              >Polyethylene</label
+            >
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="nylon" />
+            <label class="form-check-label" for="nylon">Nylon</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="latex" />
+            <label class="form-check-label" for="latex">Latex / Rubber</label>
+          </div>
+          <h6 class="mt-4"><strong>Industry</strong></h6>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="cotton" />
+            <label class="form-check-label" for="cotton">Apparel</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="polyester" />
+            <label class="form-check-label" for="polyester">Footwear</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="polypropylene"
+            />
+            <label class="form-check-label" for="polypropylene">Medical</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="polyethylene" />
+            <label class="form-check-label" for="polyethylene">Marine</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="nylon" />
+            <label class="form-check-label" for="nylon">Safety</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="latex" />
+            <label class="form-check-label" for="latex">Adventure</label>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="col-md-9 product-list">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+              <a href="detail.html" class="text-decoration-none">
+                <div class="product-card color_1">
+                  <div class="card_img">
+                    <img
+                      src="./assets/images/product_image/chair__1_-removebg-preview.png"
+                      alt="Thread"
+                    />
+                  </div>
+                  <div class="product-title">Chair Fabric</div>
+                  <div class="product-category">Where Fabric Meets Fashion</div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+              <a href="detail.html" class="text-decoration-none">
+                <div class="product-card color_2">
+                  <div class="card_img">
+                    <img
+                      src="./assets/images/product_image/sport__2.png"
+                      alt="Thread"
+                    />
+                  </div>
+                  <div class="product-title">Sport Wear Fabric</div>
+                  <div class="product-category">
+                    Durable Fabrics for Stylish Seating
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+              <a href="detail.html" class="text-decoration-none">
+                <div class="product-card color_3">
+                  <div class="card_img">
+                    <img
+                      src="./assets/images/product_image/fashion__1_-removebg-preview.png"
+                      alt="Thread"
+                    />
+                  </div>
+                  <div class="product-title">Fashion Fabric</div>
+                  <div class="product-category">
+                    Performance Fabrics for Athletes
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+              <a href="detail.html" class="text-decoration-none">
+                <div class="product-card color_4">
+                  <div class="card_img">
+                    <img
+                      src="./assets/images/product_image/Bag__3_-removebg-preview.png"
+                      alt="Thread"
+                    />
+                  </div>
+                  <div class="product-title">Luggage / Bag</div>
+                  <div class="product-category">
+                    Performance Fabrics for Athletes
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col">
+              <a href="detail.html" class="text-decoration-none">
+                <div class="product-card color_5">
+                  <div class="card_img">
+                    <img
+                      src="./assets/images/product_image/Curtain (1).jpeg"
+                      alt="Thread"
+                    />
+                  </div>
+                  <div class="product-title">Curtain Fabric</div>
+                  <div class="product-category">
+                    Performance Fabrics for Athletes
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col">
+              <a href="detail.html" class="text-decoration-none">
+                <div class="product-card color_6">
+                  <div class="card_img">
+                    <img
+                      src="./assets/images/product_image/shoe__1.png"
+                      alt="Thread"
+                    />
+                  </div>
+                  <div class="product-title">Shoes Fabric</div>
+                  <div class="product-category">
+                    Performance Fabrics for Athletes
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-section">
+      <div class="footer-content">
+        <div class="container">
+          <div class="row">
+            <!-- Company Info -->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <a href="index.html">
+                <div class="footer__logo">
+                  <img src="./assets/images/logo-blue.png" alt="" />
+                </div>
+              </a>
+
+              <div class="foote-info">
+                <div class="contact_item">
+                  <i class="fas fa-phone"></i>
+                  <span>+91 9220104048</span>
+                </div>
+                <div class="contact_item">
+                  <i class="fas fa-envelope"></i>
+                  <span>info@greatexsynthetics.com</span>
+                </div>
+                <div class="contact_item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span
+                    >E2,Sec-D1 Apparell Park,Tronica<br />City,Loni Ghaziabad
+                    (201102)</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Services -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <h4 class="footer-heading">Textile Services</h4>
+              <ul class="footer-links">
+                <li>
+                  <a href="index.html"><i class="fas fa-home"></i>Home</a>
+                </li>
+                <li>
+                  <a href="about.html"><i class="fas fa-info-circle"></i>About Us</a>
+                </li>
+                <li>
+                  <a href="all-product.html"><i class="fas fa-box"></i>Products</a>
+                </li>
+                <li>
+                  <a href="contact.html"><i class="fas fa-phone"></i>Contact Us</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fas fa-cog"></i>Services</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-lg-5 col-md-12 mb-4">
+              <h4 class="footer-heading">Stay Connected</h4>
+              <p class="mb-4 text-light">
+                Subscribe to our newsletter for the latest updates and offers.
+              </p>
+
+              <div class="social-links">
+                <a href="#" class="social-link"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+              <a href="https://www.indiamart.com/greatexsynthetics/?srsltid=AfmBOor5yzc5tSnoIHa-B0l0ldmqOZbeRkG-Oa4eeJjZHETao7CQqwRD" target="_blank" class="marketplace-badge">
+                <div class="marketplace-logo">M</div>
+                Available on INDIA MART
+              </a>
+            </div>
+          </div>
+
+          <!-- Footer Bottom -->
+          <div class="footer-bottom">
+            <p class="mb-0">
+              Copyright © 2025 Greatex Synthetics Pvt. Ltd. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+     <!-- ---------social icons-------- -->
+    <div class="social-wrapper" id="socialWrapper">
+      <!-- social icons -->
+      <div class="social-icons">
+        <a href="https://wa.me/" target="_blank" class="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" class="facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+      <!-- main toggle button -->
+      <div class="main-btn" id="toggleBtn">
+        <i class="fas fa-comment-dots" id="toggleIcon"></i>
+      </div>
+    </div>
+    <!-- <div class="loader" id="loader">
+      <span id="loading-text">Loading</span>
+    </div> -->
+    <!-- app js -->
+    <script src="./assets/js/app.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

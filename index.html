@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greatex Synthetics Pvt Ltd</title>
+
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/Favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/Favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/Favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/images/Favicon/site.webmanifest" />
+
+    <!-- style css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- fonts family -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- swiper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <!-- Top Contact Bar -->
+      <div class="top-bar d-flex align-items-center justify-content-between">
+        <a href="index.html" style="color: #fff; text-decoration: none">
+          <div class="logo">
+            <div class="logo_inner">
+              <img src="./assets/images/gratexlogo.png" alt="gratex logo" />
+            </div>
+            <div class="logo_text">
+              <h2>Greatex</h2>
+              <small>Synthetics Pvt Ltd.</small>
+            </div>
+          </div>
+        </a>
+        <div class="ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div> -->
+      </div>
+
+      <!-- Navigation Bar -->
+      <div class="nav-bar">
+        <nav>
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="#">Catalogue</a></li>
+            <li class="has-submenu">
+              <a href="all-product.html"
+                >Product <i class="fa-solid fa-angle-down ms-1"></i
+              ></a>
+              <ul class="submenu m-0 p-0">
+                <li><a href="#">Polyester Fabrics</a></li>
+                <li><a href="#">Cotton Fabrics</a></li>
+                <li><a href="#">Blended Fabrics</a></li>
+                <li><a href="#">Specialty Fabrics</a></li>
+              </ul>
+            </li>
+            <li><a href="Contact.html">Contact us</a></li>
+          </ul>
+          <div class="quote_wrapper">
+            <div class="quote-btn">
+              <i class="fa-brands fa-whatsapp"></i> Get Quote
+            </div>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Slider -->
+    <div class="cus-slider">
+      <div class="slides">
+        <div class="slide slide_bg_1 active">
+          <div class="slide-content">
+            <h2>Fabric of</h2>
+            <h1 class="image-text" data-text="Excellence">Excellence</h1>
+            <p>
+              We blend tradition with technology to craft fabrics that define
+              excellence.
+            </p>
+          </div>
+          <video class="video_overlay" autoplay muted loop playsinline>
+            <source src="./assets/images/video/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="slide slide_bg_1">
+          <video class="video_overlay" autoplay muted loop playsinline>
+            <source
+              src="./assets/images/video/Weaving (online-video-cutter.com).mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+
+        <div class="slide slide_bg_3">
+          <div class="slide-content">
+            <h2>Trusted Since Decades</h2>
+            <p>
+              Your partner in textiles, ensuring consistency and excellence
+              always.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-controls">
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+      </div>
+    </div>
+
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="row g-4">
+          <!-- Left Images -->
+          <div
+            class="col-md-6 overflow-hidden position-relative d-flex align-items-center justify-content-center"
+          >
+            <img
+              src="./assets/images/Screenshot2 2025-08-21 212939.png"
+              class="img-fluid rounded"
+              data-aos="fade-right"
+              data-aos-duration="2000"
+              alt=""
+            />
+            <div class="image_overlay"></div>
+          </div>
+
+          <!-- Right Content -->
+          <div class="col-md-6 pt-4">
+            <p class="section-title">OUR JOURNEY IS</p>
+            <h2 class="main-heading">
+              An Ultimate Textile Brand in <br /><span>Market Since 1956</span>
+            </h2>
+            <p class="text-mute">
+              Established in 1956, Ram Swaroop Rattan Lal (RSRL), the parent
+              company of Greatex Synthetics Pvt. Ltd., has been a pioneer in the
+              wholesale business of knitted and woven fabrics. Expanding into
+              manufacturing in 1989, Greatex became a leader in customized
+              textile solutions with advanced machinery and innovation-driven
+              processes.
+            </p>
+
+            <!-- Features -->
+            <div class="row feature-list mb-4">
+              <div class="col-sm-12 col-lg-6">
+                <p>
+                  <span class="check"><i class="fas fa-check"></i></span> A
+                  Legacy of Excellence
+                </p>
+                <p>
+                  <span class="check"><i class="fas fa-check"></i></span>
+                  Unparalleled Customization
+                </p>
+                <p>
+                  <span class="check"><i class="fas fa-check"></i></span>
+                  Uncompromising Quality & Trust
+                </p>
+              </div>
+              <div class="col-sm-12 col-lg-6">
+                <p>
+                  <span class="check"><i class="fas fa-check"></i></span>
+                  New-Age Leadership
+                </p>
+                <p>
+                  <span class="check"><i class="fas fa-check"></i></span> A
+                  People-Centric Approach
+                </p>
+                <p>
+                  <span class="check"><i class="fas fa-check"></i></span>
+                  Leading Textile Manufacturing
+                </p>
+              </div>
+            </div>
+            <!-- Buttons -->
+            <div class="d-flex flex-wrap gap-3">
+              <button class="btn-custom">VIEW MORE !</button>
+              <button class="btn-custom btn-outline-custom">CONTACT US</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-sm-5 mt-0 mb-5">
+      <div class="banner">
+        <div class="banner_icon">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+            />
+          </svg>
+        </div>
+        <div class="content overflow-hidden" data-aos="zoom-in">
+          <h1 class="heading">
+            Need Assistance with Our Textile Services or Orders?
+          </h1>
+          <div class="phone-numbers">+000-0000-777, +000-000-0000</div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 position-relative">
+      <div
+        class="tm-wrap-cell mb-5 d-flex align-items-center justify-content-center flex-column"
+      >
+        <p class="section-title">TEXTILE SERVICES</p>
+        <h2 class="custom-heading text-center">
+          Let's Experience Exclusive Quality
+        </h2>
+      </div>
+      <div class="overlay_bg_image"></div>
+      <div class="card-container">
+        <div class="card_Technology active" data-card="1">
+          <div class="card-number">01</div>
+          <div class="card-header">Development</div>
+          <div class="card-content">
+            <div class="card-image">
+              <img src="./assets/images/Developments.jpg" alt="Development" />
+            </div>
+            <div class="card-text">
+              <h2 class="card-title">Developments</h2>
+              <p class="card-description">
+                We focus on understanding customer requirements and developing
+                innovative products that meet global standards. Our R&D team
+                continuously explores new technologies to deliver value-driven
+                and future-ready fabric solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_Technology" data-card="2">
+          <div class="card-number">02</div>
+          <div class="card-header">Core Services</div>
+          <div class="card-content">
+            <div class="card-image">
+              <img
+                src="./assets/images/CoreServices.jpg"
+                alt=" Core Services"
+              />
+            </div>
+            <div class="card-text">
+              <h2 class="card-title">Core Services</h2>
+              <p class="text-mute">
+                Our core strength lies in ensuring a Never Out of Stock (NOS)
+                model that guarantees timely supply. With a customer-centric
+                approach, we offer tailored fabrics and services aligned with
+                evolving fashion and industry trends.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_Technology" data-card="3">
+          <div class="card-number">03</div>
+          <div class="card-header">Sustainability</div>
+          <div class="card-content">
+            <div class="card-image">
+              <img src="./assets/images/workshop.jpg" alt="Sustainability" />
+            </div>
+            <div class="card-text">
+              <h2 class="card-title">Sustainability</h2>
+              <p class="card-description">
+                We are committed to sustainable manufacturing practices by
+                integrating eco-friendly processes, minimizing waste, and
+                conserving resources. Social and technical compliance ensures
+                ethical production and responsibility towards the environment.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_Technology" data-card="4">
+          <div class="card-number">04</div>
+          <div class="card-header">Order Fulfillment</div>
+          <div class="card-content">
+            <div class="card-image">
+              <img
+                src="./assets/images/OrderFulfillment.jpg"
+                alt="Order Fulfillment"
+              />
+            </div>
+            <div class="card-text">
+              <h2 class="card-title">Order Fulfillment</h2>
+              <p class="card-description">
+                With streamlined operations, we provide real-time updates on
+                production and logistics. Our agile supply chain allows us to
+                prioritize urgent requirements while ensuring consistent quality
+                and timely deliveries.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_Technology" data-card="5">
+          <div class="card-number">05</div>
+          <div class="card-header">Quality & Testing</div>
+          <div class="card-content">
+            <div class="card-image">
+              <img
+                src="./assets/images/Quality & Testing.jpg"
+                alt="Quality & Testing"
+              />
+            </div>
+            <div class="card-text">
+              <h2 class="card-title">Quality & Testing</h2>
+              <p class="card-description">
+                Every batch undergoes stringent quality checks and laboratory
+                testing to meet global benchmarks. From raw material sourcing to
+                final delivery, we maintain uncompromised standards to build
+                long-term trust with our clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg_color my-5">
+      <div class="container py-5">
+        <div class="row g-4">
+          <div class="col-lg-7 col-xl-6">
+            <div class="content-side">
+              <div class="section-title">WELL DESIGNED</div>
+              <h2 class="main-heading text-white mt-2">We are Greatex</h2>
+              <h2 class="subtitle text-white">
+                Crafting Quality Knitted Fabrics for Over 50 Years
+              </h2>
+              <p class="description text-white">
+                Greatex Synthetics Pvt Ltd, are into manufacturing of synthetic
+                fabrics, stands out for its persistent vision and commitment.
+                The company under the supervision of Mr. Ashutosh Aggrawal and
+                Mr. Pranav Aggarwal, has developed goodwill as a recognized
+                producer of knitted fabrics, eminent for its commitment to
+                quality and supportability.
+              </p>
+              <div
+                class="stats-container mt-4 gap-3 d-flex align-items-center justify-content-between flex-sm-nowrap flex-wrap"
+              >
+                <div
+                  class="stat-item d-flex align-items-start justify-content-center gap-3"
+                >
+                  <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                  <div class="stat-content">
+                    <h3 class="counter" data-target="25">0</h3>
+                    <p>Win Awards</p>
+                  </div>
+                </div>
+
+                <div
+                  class="stat-item d-flex align-items-start justify-content-center gap-3"
+                >
+                  <div class="stat-icon"><i class="fas fa-cogs"></i></div>
+                  <div class="stat-content">
+                    <h3 class="counter" data-target="80">0</h3>
+                    <p>Equipment</p>
+                  </div>
+                </div>
+
+                <div
+                  class="stat-item d-flex align-items-start justify-content-center gap-3"
+                >
+                  <div class="stat-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                  </div>
+                  <div class="stat-content">
+                    <h3 class="counter" data-target="30">0</h3>
+                    <p>Total Years</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-xl-6 overflow-hidden">
+            <div class="wel_img" data-aos="fade-left" data-aos-duration="2000">
+              <img
+                src="./assets/images/1.jpg"
+                class="img-fluid rounded"
+                alt="wel design"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-5 position-relative">
+      <div
+        class="tm-wrap-cell mb-5 d-flex align-items-center justify-content-center flex-column"
+      >
+        <p class="section-title m-0 mb-1">We Are Gratex</p>
+        <h2 class="custom-heading text-center">
+          Where Quality Threads Meet Innovation
+        </h2>
+      </div>
+      <div class="overlay_bg_image"></div>
+      <div class="container">
+        <div class="row px-sm-2 px-0">
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide card__hover">
+                <a href="">
+                  <div class="card-img-top">
+                    <div class="slide__image">
+                      <img
+                        src="./assets/images/Categories1.png"
+                        class=""
+                        alt="Office workspace"
+                      />
+                    </div>
+                    <div class="card-body p-2 d-flex flex-column">
+                      <h6 class="text-start m-0">Chair Fabric</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide card__hover">
+                <a href="">
+                  <div class="card-img-top">
+                    <div class="slide__image">
+                      <img
+                        src="./assets/images/Categories2.jpg"
+                        class=""
+                        alt="Office workspace"
+                      />
+                    </div>
+                    <div class="card-body p-2 d-flex flex-column">
+                      <h6 class="text-start m-0">Apparel Fabric</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide card__hover">
+                <a href="">
+                  <div class="card-img-top">
+                    <div class="slide__image">
+                      <img
+                        src="./assets/images/Categories3.png"
+                        class=""
+                        alt="Office workspace"
+                      />
+                    </div>
+                    <div class="card-body p-2 d-flex flex-column">
+                      <h6 class="text-start m-0">Mesh Fabric</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide card__hover">
+                <a href="">
+                  <div class="card-img-top">
+                    <div class="slide__image">
+                      <img
+                        src="./assets/images/Categories4.png"
+                        class=""
+                        alt="Office workspace"
+                      />
+                    </div>
+                    <div class="card-body p-2 d-flex flex-column">
+                      <h6 class="text-start m-0">High Fashion Fabric</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide card__hover">
+                <a href="">
+                  <div class="card-img-top">
+                    <div class="slide__image">
+                      <img
+                        src="./assets/images/Categories5.png"
+                        class=""
+                        alt="Office workspace"
+                      />
+                    </div>
+                    <div class="card-body p-2 d-flex flex-column">
+                      <h6 class="text-start m-0">Chair Fabric</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide card__hover">
+                <a href="">
+                  <div class="card-img-top">
+                    <div class="slide__image">
+                      <img
+                        src="./assets/images/Categories6.png"
+                        class=""
+                        alt="Office workspace"
+                      />
+                    </div>
+                    <div class="card-body p-2 d-flex flex-column">
+                      <h6 class="text-start m-0">Apparel Fabric</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="slider_btn">
+              <div
+                class="swiper-button-prev"
+                tabindex="0"
+                role="button"
+                aria-label="Previous slide"
+                aria-controls="swiper-wrapper-d987881f94a29da1"
+              ></div>
+              <div
+                class="swiper-button-next"
+                tabindex="0"
+                role="button"
+                aria-label="Next slide"
+                aria-controls="swiper-wrapper-d987881f94a29da1"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="client">
+      <div
+        class="tm-wrap-cell d-flex align-items-center justify-content-center flex-column"
+      >
+        <h2 class="custom-heading text-center">Our Clients</h2>
+      </div>
+      <div class="container position-relative z-1">
+        <div class="row">
+          <div class="slider_client_img">
+            <div class="slide-track">
+              <!-- One set of logos -->
+
+              <div class="slide___1">
+                <img
+                  src="./assets/images/client logo/godrej-removebg-preview.png"
+                />
+              </div>
+              <div class="slide___1">
+                <img
+                  src="./assets/images/client logo/hummel-removebg-preview.png"
+                />
+              </div>
+              <div class="slide___1">
+                <img src="./assets/images/client logo/liberty.png" />
+              </div>
+              <div class="slide___1 wesiside">
+                <img
+                  src="./assets/images/client logo/reebok-removebg-preview.png"
+                />
+              </div>
+              <div class="slide___1">
+                <img
+                  src="./assets/images/client logo/ritu-removebg-preview.png"
+                />
+              </div>
+              <div class="slide___1">
+                <img
+                  src="./assets/images/client logo/samsonite-logo-removebg-preview.png"
+                />
+              </div>
+              <div class="slide___1">
+                <img
+                  src="./assets/images/client logo/spinneys-removebg-preview.png"
+                />
+              </div>
+              <div class="slide___1 wesiside">
+                <img
+                  src="./assets/images/client logo/wildcraft-removebg-preview.png"
+                />
+              </div>
+              <div class="slide___1">
+                <img
+                  src="./assets/images/client logo/Zivame-Logo-removebg-preview.png"
+                />
+              </div>
+
+              <!-- Repeat logos for infinite scroll -->
+
+              <div class="slide___1">
+                <img
+                  src="./assets/images/client logo/godrej-removebg-preview.png"
+                />
+              </div>
+              <div class="slide___1">
+                <img
+                  src="./assets/images/client logo/hummel-removebg-preview.png"
+                />
+              </div>
+              <div class="slide___1">
+                <img src="./assets/images/client logo/liberty.png" />
+              </div>
+              <div class="slide___1">
+                <img
+                  src="./assets/images/client logo/reebok-removebg-preview.png"
+                />
+              </div>
+              <div class="slide___1">
+                <img
+                  src="./assets/images/client logo/ritu-removebg-preview.png"
+                />
+              </div>
+              <div class="slide___1">
+                <img
+                  src="./assets/images/client logo/samsonite-logo-removebg-preview.png"
+                />
+              </div>
+              <div class="slide___1">
+                <img
+                  src="./assets/images/client logo/spinneys-removebg-preview.png"
+                />
+              </div>
+              <div class="slide___1">
+                <img
+                  src="./assets/images/client logo/spinneys-removebg-preview.png"
+                />
+              </div>
+              <div class="slide___1">
+                <img
+                  src="./assets/images/client logo/wildcraft-removebg-preview.png"
+                />
+              </div>
+              <div class="slide___1">
+                <img
+                  src="./assets/images/client logo/Zivame-Logo-removebg-preview.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-section">
+      <div class="footer-content">
+        <div class="container">
+          <div class="row">
+            <!-- Company Info -->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <a href="index.html">
+                <div class="footer__logo">
+                  <img src="./assets/images/logo-blue.png" alt="" />
+                </div>
+              </a>
+
+              <div class="foote-info">
+                <div class="contact_item">
+                  <i class="fas fa-phone"></i>
+                  <span>+91 9220104048</span>
+                </div>
+                <div class="contact_item">
+                  <i class="fas fa-envelope"></i>
+                  <span>info@greatexsynthetics.com</span>
+                </div>
+                <div class="contact_item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span
+                    >E2,Sec-D1 Apparell Park,Tronica<br />City,Loni Ghaziabad
+                    (201102)</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Services -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <h4 class="footer-heading">Textile Services</h4>
+              <ul class="footer-links">
+                <li>
+                  <a href="index.html"><i class="fas fa-home"></i>Home</a>
+                </li>
+                <li>
+                  <a href="about.html"><i class="fas fa-info-circle"></i>About Us</a>
+                </li>
+                <li>
+                  <a href="all-product.html"><i class="fas fa-box"></i>Products</a>
+                </li>
+                <li>
+                  <a href="contact.html"><i class="fas fa-phone"></i>Contact Us</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fas fa-cog"></i>Services</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-lg-5 col-md-12 mb-4">
+              <h4 class="footer-heading">Stay Connected</h4>
+              <p class="mb-4 text-light">
+                Subscribe to our newsletter for the latest updates and offers.
+              </p>
+
+              <div class="social-links">
+                <a href="#" class="social-link"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+              <a href="https://www.indiamart.com/greatexsynthetics/?srsltid=AfmBOor5yzc5tSnoIHa-B0l0ldmqOZbeRkG-Oa4eeJjZHETao7CQqwRD" target="_blank" class="marketplace-badge">
+                <div class="marketplace-logo">M</div>
+                Available on INDIA MART
+              </a>
+            </div>
+          </div>
+
+          <!-- Footer Bottom -->
+          <div class="footer-bottom">
+            <p class="mb-0">
+              Copyright © 2025 Greatex Synthetics Pvt. Ltd. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="loader" id="loader">
+      <span id="loading-text">Loading</span>
+    </div>
+    <!-- ---------social icons-------- -->
+    <div class="social-wrapper" id="socialWrapper">
+      <!-- social icons -->
+      <div class="social-icons">
+        <a href="https://wa.me/" target="_blank" class="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" class="facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+      <!-- main toggle button -->
+      <div class="main-btn" id="toggleBtn">
+        <i class="fas fa-comment-dots" id="toggleIcon"></i>
+      </div>
+    </div>
+    <!-- app js -->
+    <script src="./assets/js/app.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        },
+      });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
