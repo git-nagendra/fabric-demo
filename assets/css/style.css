@@ -278,7 +278,7 @@ header {
   object-fit: cover;
 }
 .new_arival {
-  height: 500px;
+  height: 600px;
   border-radius: 30px;
 }
 .slide_bg_2,
@@ -2154,13 +2154,18 @@ body.no-scroll {
 /* Magnifier */
 .magnifier {
   position: absolute;
-  width: 200px;
-  height: 250px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  width: 280px;
+  height: 280px;
+  background-repeat: no-repeat;
   display: none;
   pointer-events: none;
+  cursor: none;
+  z-index: 10;
 }
-
+.main-image-container,
+.popup-image-container {
+  position: relative !important;
+}
 /* ================= RESPONSIVE POPUP ================= */
 @media (max-width: 1024px) {
   .popup-content {

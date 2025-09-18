@@ -2,7 +2,7 @@ let galleries = document.querySelectorAll(".product-gallery");
 let popup = document.getElementById("popup");
 let popupImage = document.getElementById("popupImage");
 let popupBg = document.getElementById("popupBg");
-let magnifier = document.getElementById("magnifier");
+let magnifierPopup = document.getElementById("magnifier"); // magnifier inside popup
 
 // 🔥 Select header background overlay
 let headerBg = document.querySelector(".product_overlay.dynamic-bg");
@@ -11,13 +11,21 @@ let currentGallery = null;
 let currentIndex = 0;
 let zoomLevel = 1;
 
-galleries.forEach((gallery, gIndex) => {
+// Magnifier zoom factor (default 3x)
+let magnifierZoom = 3;
+
+galleries.forEach((gallery) => {
   let images = JSON.parse(gallery.dataset.images);
   let mainImage = gallery.querySelector(".main-image");
   let thumbs = gallery.querySelector(".thumbnails");
   let leftBtn = gallery.querySelector(".nav-btn-left");
   let rightBtn = gallery.querySelector(".nav-btn-right");
   let zoomBtn = gallery.querySelector(".zoom-btn");
+
+  // ✅ Create magnifier for MAIN image
+  let magnifierMain = document.createElement("div");
+  magnifierMain.className = "magnifier";
+  gallery.querySelector(".main-image-container").appendChild(magnifierMain);
 
   function updateGallery() {
     mainImage.src = images[currentIndex];
@@ -66,6 +74,30 @@ galleries.forEach((gallery, gIndex) => {
 
   mainImage.onclick = openPopup;
   zoomBtn.onclick = openPopup;
+
+  // ✅ Magnifier for MAIN image (follows pointer)
+  mainImage.addEventListener("mouseenter", () => {
+    magnifierMain.style.display = "block";
+  });
+
+  mainImage.addEventListener("mouseleave", () => {
+    magnifierMain.style.display = "none";
+  });
+
+  mainImage.addEventListener("mousemove", (e) => {
+    if (magnifierMain.style.display !== "block") return;
+
+    const rect = mainImage.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    magnifierMain.style.left = `${x - magnifierMain.offsetWidth / 2}px`;
+    magnifierMain.style.top = `${y - magnifierMain.offsetHeight / 2}px`;
+
+    magnifierMain.style.backgroundImage = `url(${mainImage.src})`;
+    magnifierMain.style.backgroundSize = `${mainImage.width * magnifierZoom}px ${mainImage.height * magnifierZoom}px`;
+    magnifierMain.style.backgroundPosition = `-${x * magnifierZoom - magnifierMain.offsetWidth / 2}px -${y * magnifierZoom - magnifierMain.offsetHeight / 2}px`;
+  });
 });
 
 // Popup close
@@ -82,36 +114,28 @@ document.getElementById("zoomOutBtn").onclick = () => {
   popupImage.style.transform = `scale(${zoomLevel})`;
 };
 
-// Magnifier - always in center
+// ✅ Magnifier for POPUP image (fixed in center)
+popupImage.addEventListener("mouseenter", () => {
+  magnifierPopup.style.display = "block";
+
+  // Keep magnifier fixed in the center of popup image
+  magnifierPopup.style.left = `${popupImage.offsetWidth / 2 - magnifierPopup.offsetWidth / 2}px`;
+  magnifierPopup.style.top = `${popupImage.offsetHeight / 2 - magnifierPopup.offsetHeight / 2}px`;
+});
+
+popupImage.addEventListener("mouseleave", () => {
+  magnifierPopup.style.display = "none";
+});
+
 popupImage.addEventListener("mousemove", (e) => {
+  if (magnifierPopup.style.display !== "block") return;
+
   const rect = popupImage.getBoundingClientRect();
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Place magnifier in center of popup image
-  magnifier.style.left = `${
-    popupImage.offsetWidth / 2 - magnifier.offsetWidth / 2
-  }px`;
-  magnifier.style.top = `${
-    popupImage.offsetHeight / 2 - magnifier.offsetHeight / 2
-  }px`;
-
-  // Background for zoom effect
-  magnifier.style.backgroundImage = `url(${popupImage.src})`;
-  magnifier.style.backgroundSize = `${popupImage.width * 2}px ${
-    popupImage.height * 2
-  }px`;
-  magnifier.style.backgroundPosition = `-${
-    x * 2 - magnifier.offsetWidth / 2
-  }px -${y * 2 - magnifier.offsetHeight / 2}px`;
-
-  magnifier.style.display = "block";
+  // Update zoom area, magnifier itself stays fixed
+  magnifierPopup.style.backgroundImage = `url(${popupImage.src})`;
+  magnifierPopup.style.backgroundSize = `${popupImage.width * magnifierZoom}px ${popupImage.height * magnifierZoom}px`;
+  magnifierPopup.style.backgroundPosition = `-${x * magnifierZoom - magnifierPopup.offsetWidth / 2}px -${y * magnifierZoom - magnifierPopup.offsetHeight / 2}px`;
 });
-
-// Hide when leaving
-popupImage.addEventListener(
-  "mouseleave",
-  () => (magnifier.style.display = "none")
-);
-
-
