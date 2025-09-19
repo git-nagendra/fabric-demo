@@ -1386,7 +1386,7 @@ body.no-scroll {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.2;
+  opacity: 0.288;
 }
 .c-map img {
   height: 100%;
@@ -1889,7 +1889,7 @@ body.no-scroll {
 .product__wrapper {
   position: relative;
   overflow: hidden;
-  padding: 4rem 0;
+  padding: 5.5rem 0;
 }
 
 .product_overlay.dynamic-bg {
@@ -2016,12 +2016,11 @@ body.no-scroll {
   color: initial;
 }
 .product-title {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 700;
   color: #e01d47 !important;
 
   text-transform: capitalize;
-  margin-top: 17px;
 }
 .product-category {
   color: #222222c2;
