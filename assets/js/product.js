@@ -4,9 +4,6 @@ let popupImage = document.getElementById("popupImage");
 let popupBg = document.getElementById("popupBg");
 let magnifierPopup = document.getElementById("magnifier"); // magnifier inside popup
 
-// 🔥 Select header background overlay
-let headerBg = document.querySelector(".product_overlay.dynamic-bg");
-
 let currentGallery = null;
 let currentIndex = 0;
 let zoomLevel = 1;
@@ -33,10 +30,7 @@ galleries.forEach((gallery) => {
       .querySelectorAll(".thumbnail")
       .forEach((t, i) => t.classList.toggle("active", i === currentIndex));
 
-    // 🔥 Update Premium Header background dynamically
-    if (headerBg) {
-      headerBg.style.backgroundImage = `url(${images[currentIndex]})`;
-    }
+    // 🔥 Removed headerBg dynamic background update
   }
 
   images.forEach((src, i) => {
