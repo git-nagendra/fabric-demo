@@ -60,7 +60,7 @@
 
   // Start smooth phrase rotation immediately
   if (loader && textEl) {
-    const cycleMs = 1000; // per phrase
+    const cycleMs = 2000; // per phrase
     const fadeMs = 500; // fade duration
     let idx = 0;
     textEl.textContent = texts[idx];
