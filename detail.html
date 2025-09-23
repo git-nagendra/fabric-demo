@@ -56,6 +56,55 @@
     />
   </head>
   <body>
+     <header class="">
+      <!-- Top Contact Bar -->
+      <div
+        class="top-bar about_header d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" style="color: #fff; text-decoration: none">
+          <div class="logo">
+            <div class="logo_inner">
+              <img src="./assets/images/gratexlogo.png" alt="gratex logo" />
+            </div>
+            <div class="logo_text">
+              <h2>Greatex</h2>
+              <small>Synthetics Pvt Ltd.</small>
+            </div>
+          </div>
+        </a>
+        <div class="ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div> -->
+      </div>
+
+      <!-- Navigation Bar -->
+      <div class="nav-bar">
+        <nav>
+          <ul>
+            <li><a href="index.html" class="">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="#">Catalogue</a></li>
+            <li class="has-submenu">
+              <a href="all-product.html" class="active"
+                >Product <i class="fa-solid fa-angle-down ms-1"></i
+              ></a>
+              <ul class="submenu m-0 p-0">
+                <li><a href="#">Polyester Fabrics</a></li>
+                <li><a href="#">Cotton Fabrics</a></li>
+                <li><a href="#">Blended Fabrics</a></li>
+                <li><a href="#">Specialty Fabrics</a></li>
+              </ul>
+            </li>
+            <li><a href="Contact.html">Contact us</a></li>
+          </ul>
+          
+        </nav>
+      </div>
+    </header>
+
     <section>
       <!-- Premium Card Header -->
       <div class="product__wrapper">
@@ -130,25 +179,25 @@
             <div>
               <div class="details-card">
                 <div
-                  class="d-flex align-items-start justify-content-between mb-3"
+                  class="d-flex align-items-start justify-content-between flex-wrap mb-3"
                 >
                   <h1 class="product-title">Product Details</h1>
                   <div class="d-flex gap-2">
                     <button
                       class="btn btn-primary"
-                      alt="Certificate 1"
                       data-bs-toggle="modal"
                       data-bs-target="#certModal"
+                      onclick="fillQuoteMessage()"
                     >
-                      <i class="fas fa-file-invoice"></i> Request Quote
+                      <i class="fas fa-envelope"></i> Request Quote
                     </button>
-                    <button class="btn btn-primary">
-                      <i class="fas fa-share-alt"></i> Share
+                    <button class="btn btn-primary" onclick="shareOnWhatsApp()">
+                      <i class="fab fa-whatsapp"></i> Share
                     </button>
                   </div>
                 </div>
                 <div class="detail-row">
-                  <span>Product Name:</span><span>Shoes Fabric Dno-283</span>
+                  <span id="Product_name">Product Name:</span><span id="product_value">Shoes Fabric Dno-283</span>
                 </div>
                 <div class="detail-row">
                   <span>Width:</span><span>62 inches</span>
@@ -195,7 +244,7 @@
       </div>
       <div class="overlay_bg_image overlay_bg___image"></div>
       <div class="container">
-        <div class="row">
+        <div class="row px-sm-0 px-3">
           <!-- Swiper -->
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -471,7 +520,16 @@
                           />
                         </div>
                         <div class="mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Mobile Number"
+                            required
+                          />
+                        </div>
+                        <div class="mb-3">
                           <textarea
+                           id="quoteMessage"
                             class="form-control"
                             rows="5"
                             placeholder="Your Message"

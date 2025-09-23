@@ -23,9 +23,10 @@
   // Phrases
   const texts = [
     "Threads of Tradition",
+    "Legacy in every thread-greatex",
     "Crafted with Care",
     "Loomed to Perfection",
-    "Elegance in Every Fiber"
+    "Elegance in Every Fiber",
   ];
 
   const loader = document.getElementById("loader");
@@ -60,7 +61,7 @@
   // Start smooth phrase rotation immediately
   if (loader && textEl) {
     const cycleMs = 1000; // per phrase
-    const fadeMs  = 500;  // fade duration
+    const fadeMs = 500; // fade duration
     let idx = 0;
     textEl.textContent = texts[idx];
     textEl.style.opacity = "1";
@@ -92,11 +93,15 @@
     requestAnimationFrame(tick);
 
     // Hide strictly on load complete so it only shows during page loading
-    window.addEventListener("load", () => {
-      if (rafId) cancelAnimationFrame(rafId);
-      loader.style.display = "none";
-      unlockScroll();
-    }, { once: true });
+    window.addEventListener(
+      "load",
+      () => {
+        if (rafId) cancelAnimationFrame(rafId);
+        loader.style.display = "none";
+        unlockScroll();
+      },
+      { once: true }
+    );
   }
 })();
 
@@ -243,4 +248,6 @@
       fullImg.src = "";
     });
   });
-})();
+})
+();
+

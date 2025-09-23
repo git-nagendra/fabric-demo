@@ -89,8 +89,12 @@ galleries.forEach((gallery) => {
     magnifierMain.style.top = `${y - magnifierMain.offsetHeight / 2}px`;
 
     magnifierMain.style.backgroundImage = `url(${mainImage.src})`;
-    magnifierMain.style.backgroundSize = `${mainImage.width * magnifierZoom}px ${mainImage.height * magnifierZoom}px`;
-    magnifierMain.style.backgroundPosition = `-${x * magnifierZoom - magnifierMain.offsetWidth / 2}px -${y * magnifierZoom - magnifierMain.offsetHeight / 2}px`;
+    magnifierMain.style.backgroundSize = `${
+      mainImage.width * magnifierZoom
+    }px ${mainImage.height * magnifierZoom}px`;
+    magnifierMain.style.backgroundPosition = `-${
+      x * magnifierZoom - magnifierMain.offsetWidth / 2
+    }px -${y * magnifierZoom - magnifierMain.offsetHeight / 2}px`;
   });
 });
 
@@ -113,8 +117,12 @@ popupImage.addEventListener("mouseenter", () => {
   magnifierPopup.style.display = "block";
 
   // Keep magnifier fixed in the center of popup image
-  magnifierPopup.style.left = `${popupImage.offsetWidth / 2 - magnifierPopup.offsetWidth / 2}px`;
-  magnifierPopup.style.top = `${popupImage.offsetHeight / 2 - magnifierPopup.offsetHeight / 2}px`;
+  magnifierPopup.style.left = `${
+    popupImage.offsetWidth / 2 - magnifierPopup.offsetWidth / 2
+  }px`;
+  magnifierPopup.style.top = `${
+    popupImage.offsetHeight / 2 - magnifierPopup.offsetHeight / 2
+  }px`;
 });
 
 popupImage.addEventListener("mouseleave", () => {
@@ -130,6 +138,33 @@ popupImage.addEventListener("mousemove", (e) => {
 
   // Update zoom area, magnifier itself stays fixed
   magnifierPopup.style.backgroundImage = `url(${popupImage.src})`;
-  magnifierPopup.style.backgroundSize = `${popupImage.width * magnifierZoom}px ${popupImage.height * magnifierZoom}px`;
-  magnifierPopup.style.backgroundPosition = `-${x * magnifierZoom - magnifierPopup.offsetWidth / 2}px -${y * magnifierZoom - magnifierPopup.offsetHeight / 2}px`;
+  magnifierPopup.style.backgroundSize = `${
+    popupImage.width * magnifierZoom
+  }px ${popupImage.height * magnifierZoom}px`;
+  magnifierPopup.style.backgroundPosition = `-${
+    x * magnifierZoom - magnifierPopup.offsetWidth / 2
+  }px -${y * magnifierZoom - magnifierPopup.offsetHeight / 2}px`;
 });
+
+(() => {
+  // WhatsApp Share
+  window.shareOnWhatsApp = function () {
+    let currentUrl = window.location.href;
+    let phoneNumber = "919792908929"; // with country code
+    let productName = document.getElementById("product_value").innerText;
+
+    let message = productName + " " + currentUrl;
+    let whatsappUrl =
+      "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+
+    window.open(whatsappUrl, "_blank");
+  };
+
+  // Fill Request Quote Modal
+  window.fillQuoteMessage = function () {
+    let productName = document.getElementById("product_value").innerText;
+    let textarea = document.getElementById("quoteMessage");
+    textarea.value =
+      "I am interested in " + productName + ". Please provide me a quote.";
+  };
+})();

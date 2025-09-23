@@ -101,16 +101,7 @@
             </li>
             <li><a href="Contact.html">Contact us</a></li>
           </ul>
-          <div class="quote_wrapper">
-            <div class="quote-btn">
-              <i class="fa-brands fa-whatsapp"></i> Get Quote
-            </div>
-            <div class="social-icons">
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-facebook"></i></a>
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            </div>
-          </div>
+        
         </nav>
       </div>
     </header>
@@ -369,43 +360,32 @@
                 Delivering audited quality with certified compliance for global
                 engagements and transparent outcomes.
               </p>
-             
             </div>
           </div>
 
           <!-- Certificates -->
           <div class="col-lg-6 right-col">
             <div class="d-flex gap-3 justify-content-lg-end">
-              <div
-                class="cert-card"
-                data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
-                style="max-width: 250px; cursor: pointer"
-              >
+              <div class="cert-card" style="width: 250px; cursor: pointer">
                 <img
                   class="cert-img"
-                  alt="Certificate 1"
-                  data-bs-toggle="modal"
-                  data-bs-target="#certModal"
                   src="./assets/images/certificate.jpg"
                   alt="Certificate 1"
-                />
-              </div>
-              <div
-                class="cert-card"
-                data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
-                style="max-width: 250px; cursor: pointer"
-              >
-                <img
-                  class="cert-img"
-                  alt="Certificate 1"
                   data-bs-toggle="modal"
                   data-bs-target="#certModal"
+                  data-pdf="./assets/images/pdf/CERTIFICATE.pdf"
+                />
+              </div>
+
+              <div class="cert-card" style="width: 250px; cursor: pointer">
+                <img
+                  class="cert-img"
                   src="./assets/images/certificate1.png"
                   alt="Certificate 2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#certModal"
+                   data-pdf="./assets/images/pdf/RCS_Scope.pdf"
+                 
                 />
               </div>
             </div>
@@ -640,7 +620,6 @@
     <!-- 2) Fullscreen Bootstrap modal (place near end of body) -->
     <div class="modal fade" id="certModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-fullscreen modal-dialog-centered">
-        <!-- fixed width -->
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Certificate</h5>
@@ -652,9 +631,15 @@
             ></button>
           </div>
 
-          <!-- fixed height area that scrolls if needed -->
+          <!-- Show PDF inside modal -->
           <div class="modal-body p-0 overflow-auto">
-            <img id="certFullImg" class="popup_image" alt="Certificate" />
+            <iframe
+              id="certPdfViewer"
+              src=""
+              width="100%"
+              height="100%"
+              style="border: none"
+            ></iframe>
           </div>
         </div>
       </div>
@@ -672,6 +657,14 @@
     <script>
       AOS.init({
         once: true,
+      });
+    </script>
+    <script>
+      document.querySelectorAll(".cert-img").forEach((img) => {
+        img.addEventListener("click", function () {
+          const pdfUrl = this.getAttribute("data-pdf");
+          document.getElementById("certPdfViewer").src = pdfUrl;
+        });
       });
     </script>
   </body>
