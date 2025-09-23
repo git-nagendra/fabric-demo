@@ -23,7 +23,7 @@
   // Phrases
   const texts = [
     "Threads of Tradition",
-    "Legacy in every thread-greatex",
+    "Legacy in every thread",
     "Crafted with Care",
     "Loomed to Perfection",
     "Elegance in Every Fiber",
@@ -61,7 +61,7 @@
   // Start smooth phrase rotation immediately
   if (loader && textEl) {
     const cycleMs = 2000; // per phrase
-    const fadeMs = 500; // fade duration
+    const fadeMs = 1000; // fade duration
     let idx = 0;
     textEl.textContent = texts[idx];
     textEl.style.opacity = "1";
