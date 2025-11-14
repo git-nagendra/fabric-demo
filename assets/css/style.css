@@ -901,7 +901,7 @@ body.no-scroll {
       rgba(33, 20, 130, 0.2),
       rgba(228, 10, 10, 0.2)
     ),
-    url(../images/workshop.jpg);
+    url(../images/gratex-synthetics-pvt-sustainability-initiatives.jpg);
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
@@ -1281,7 +1281,7 @@ body.no-scroll {
 /* Section background and overlay */
 .hero-stats {
   position: relative;
-  background: url("../images/Manufacturing_bg.png") center/cover no-repeat;
+  background: url("../images/Gratex-Synthetics-Manufacturing_bg.png") center/cover no-repeat;
   background-attachment: fixed;
   color: #e5e7eb;
   padding: 6rem 0;
@@ -2758,7 +2758,7 @@ body.no-scroll {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/fb-bg2.jpeg");
+  background-image: url("../images/Gratex-Synthetics-loder-img.jpeg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
