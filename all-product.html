@@ -130,206 +130,240 @@
 
     <div class="container py-5">
       <div class="row">
-        <!-- Filter Sidebar -->
-        <div class="col-md-3 filter-section">
-          <h6><strong>Product</strong></h6>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="thread" />
-            <label class="form-check-label" for="thread">Thread</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="elastic" />
-            <label class="form-check-label" for="elastic">Elastic</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="ropes" />
-            <label class="form-check-label" for="ropes">Ropes / Cords</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="tape" />
-            <label class="form-check-label" for="tape"
-              >Tape / Strap / Webbing</label
-            >
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="madeups" />
-            <label class="form-check-label" for="madeups">Made ups</label>
-          </div>
+        <!-- Filter + Product Layout -->
+<div class="container mt-4">
+  <div class="row">
 
-          <h6 class="mt-4"><strong>Material</strong></h6>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="cotton" />
-            <label class="form-check-label" for="cotton">Cotton</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="polyester" />
-            <label class="form-check-label" for="polyester">Polyester</label>
-          </div>
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="polypropylene"
+    <!-- ---------------- FILTER SIDEBAR ---------------- -->
+    <div class="col-md-3 filter-section">
+      <h6><strong>Product</strong></h6>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="thread" />
+        <label class="form-check-label" for="thread">Thread</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="elastic" />
+        <label class="form-check-label" for="elastic">Elastic</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="ropes" />
+        <label class="form-check-label" for="ropes">Ropes / Cords</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="tape" />
+        <label class="form-check-label" for="tape">Tape / Strap / Webbing</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="madeups" />
+        <label class="form-check-label" for="madeups">Made ups</label>
+      </div>
+
+      <h6 class="mt-4"><strong>Material</strong></h6>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="cotton" />
+        <label class="form-check-label" for="cotton">Cotton</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="polyester" />
+        <label class="form-check-label" for="polyester">Polyester</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="polypropylene" />
+        <label class="form-check-label" for="polypropylene">Polypropylene</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="polyethylene" />
+        <label class="form-check-label" for="polyethylene">Polyethylene</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="nylon" />
+        <label class="form-check-label" for="nylon">Nylon</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="latex" />
+        <label class="form-check-label" for="latex">Latex / Rubber</label>
+      </div>
+
+      <h6 class="mt-4"><strong>Industry</strong></h6>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="apparel" />
+        <label class="form-check-label" for="apparel">Apparel</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="footwear" />
+        <label class="form-check-label" for="footwear">Footwear</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="medical" />
+        <label class="form-check-label" for="medical">Medical</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="marine" />
+        <label class="form-check-label" for="marine">Marine</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="safety" />
+        <label class="form-check-label" for="safety">Safety</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="adventure" />
+        <label class="form-check-label" for="adventure">Adventure</label>
+      </div>
+    </div>
+
+    <!-- ---------------- PRODUCT LIST ---------------- -->
+   <!-- Product Grid -->
+<div class="col-md-9 product-list">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="productList">
+
+    <!-- Card 1 -->
+    <div class="col product-item"
+      data-product="madeups"
+      data-material="polyester"
+      data-industry="furniture, apparel">
+      <a href="detail.html" class="text-decoration-none">
+        <div class="product-card color_1">
+          <div class="card_img">
+            <img
+              src="./assets/images/product_image/gratex-synthetics-pvt-chair-fabric1-manufacturing.png"
+              alt="High-quality chair upholstery fabric crafted for modern furniture by Gratex Synthetics Pvt. Ltd."
             />
-            <label class="form-check-label" for="polypropylene"
-              >Polypropylene</label
-            >
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="polyethylene" />
-            <label class="form-check-label" for="polyethylene"
-              >Polyethylene</label
-            >
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="nylon" />
-            <label class="form-check-label" for="nylon">Nylon</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="latex" />
-            <label class="form-check-label" for="latex">Latex / Rubber</label>
-          </div>
-          <h6 class="mt-4"><strong>Industry</strong></h6>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="cotton" />
-            <label class="form-check-label" for="cotton">Apparel</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="polyester" />
-            <label class="form-check-label" for="polyester">Footwear</label>
-          </div>
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="polypropylene"
+          <div class="product-title">Chair Fabric</div>
+          <div class="product-category">Where Fabric Meets Fashion</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col product-item"
+      data-product="elastic"
+      data-material="polyester, nylon"
+      data-industry="sports, apparel">
+      <a href="detail.html" class="text-decoration-none">
+        <div class="product-card color_2">
+          <div class="card_img">
+            <img
+              src="./assets/images/product_image/gratex-synthetics-pvt-sport-wear-fabric.png"
+              alt="Advanced sport wear textile designed for flexibility and durability by Gratex Synthetics Pvt. Ltd."
             />
-            <label class="form-check-label" for="polypropylene">Medical</label>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="polyethylene" />
-            <label class="form-check-label" for="polyethylene">Marine</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="nylon" />
-            <label class="form-check-label" for="nylon">Safety</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="latex" />
-            <label class="form-check-label" for="latex">Adventure</label>
+          <div class="product-title">Sport Wear Fabric</div>
+          <div class="product-category">
+            Durable Fabrics for Stylish Seating
           </div>
         </div>
+      </a>
+    </div>
 
-        <!-- Product Grid -->
-        <div class="col-md-9 product-list">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-            <!-- Card 1 -->
-            <div class="col">
-              <a href="detail.html" class="text-decoration-none">
-                <div class="product-card color_1">
-                  <div class="card_img">
-                    <img
-                      src="./assets/images/product_image/gratex-synthetics-pvt-chair-fabric1-manufacturing.png"
-                      alt="High-quality chair upholstery fabric crafted for modern furniture by Gratex Synthetics Pvt. Ltd."
-                    />
-                  </div>
-                  <div class="product-title">Chair Fabric</div>
-                  <div class="product-category">Where Fabric Meets Fashion</div>
-                </div>
-              </a>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="col">
-              <a href="detail.html" class="text-decoration-none">
-                <div class="product-card color_2">
-                  <div class="card_img">
-                    <img
-                      src="./assets/images/product_image/gratex-synthetics-pvt-sport-wear-fabric.png"
-                      alt="Advanced sport wear textile designed for flexibility and durability by Gratex Synthetics Pvt. Ltd."
-                    />
-                  </div>
-                  <div class="product-title">Sport Wear Fabric</div>
-                  <div class="product-category">
-                    Durable Fabrics for Stylish Seating
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col">
-              <a href="detail.html" class="text-decoration-none">
-                <div class="product-card color_3">
-                  <div class="card_img">
-                    <img
-                      src="./assets/images/product_image/gratex-synthetics-pvt-fashion-fabric.png"
-                      alt="Premium fashion fabric collection developed for contemporary clothing by Gratex Synthetics Pvt. Ltd."
-                    />
-                  </div>
-                  <div class="product-title">Fashion Fabric</div>
-                  <div class="product-category">
-                    Performance Fabrics for Athletes
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="col">
-              <a href="detail.html" class="text-decoration-none">
-                <div class="product-card color_4">
-                  <div class="card_img">
-                    <img
-                      src="./assets/images/product_image/gratex-synthetics-pvt-luggage-fabric.png"
-                      alt="Heavy-duty fabric for luggage and travel bags engineered by Gratex Synthetics Pvt. Ltd."
-                    />
-                  </div>
-                  <div class="product-title">Luggage / Bag</div>
-                  <div class="product-category">
-                    Performance Fabrics for Athletes
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="col">
-              <a href="detail.html" class="text-decoration-none">
-                <div class="product-card color_5">
-                  <div class="card_img">
-                    <img
-                      src="./assets/images/product_image/gratex-synthetics-pvt-curtain-fabric.jpeg"
-                      alt="Stylish curtain and home décor fabric designed for elegant interiors by Gratex Synthetics Pvt. Ltd."
-                    />
-                  </div>
-                  <div class="product-title">Curtain Fabric</div>
-                  <div class="product-category">
-                    Performance Fabrics for Athletes
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="col">
-              <a href="detail.html" class="text-decoration-none">
-                <div class="product-card color_6">
-                  <div class="card_img">
-                    <img
-                      src="./assets/images/product_image/gratex-synthetics-pvt-shoefabric.png"
-                      alt="High-performance shoe fabric created for long-lasting footwear by Gratex Synthetics Pvt. Ltd."
-                    />
-                  </div>
-                  <div class="product-title">Shoes Fabric</div>
-                  <div class="product-category">
-                    Performance Fabrics for Athletes
-                  </div>
-                </div>
-              </a>
-            </div>
+    <!-- Card 3 -->
+    <div class="col product-item"
+      data-product="thread"
+      data-material="cotton, polyester"
+      data-industry="fashion, apparel">
+      <a href="detail.html" class="text-decoration-none">
+        <div class="product-card color_3">
+          <div class="card_img">
+            <img
+              src="./assets/images/product_image/gratex-synthetics-pvt-fashion-fabric.png"
+              alt="Premium fashion fabric collection developed for contemporary clothing by Gratex Synthetics Pvt. Ltd."
+            />
+          </div>
+          <div class="product-title">Fashion Fabric</div>
+          <div class="product-category">
+            Performance Fabrics for Athletes
           </div>
         </div>
+      </a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col product-item"
+      data-product="ropes"
+      data-material="polypropylene, polyester"
+      data-industry="luggage, travel, adventure">
+      <a href="detail.html" class="text-decoration-none">
+        <div class="product-card color_4">
+          <div class="card_img">
+            <img
+              src="./assets/images/product_image/gratex-synthetics-pvt-luggage-fabric.png"
+              alt="Heavy-duty fabric for luggage and travel bags engineered by Gratex Synthetics Pvt. Ltd."
+            />
+          </div>
+          <div class="product-title">Luggage / Bag</div>
+          <div class="product-category">
+            Performance Fabrics for Athletes
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col product-item"
+      data-product="madeups"
+      data-material="cotton"
+      data-industry="home, decor">
+      <a href="detail.html" class="text-decoration-none">
+        <div class="product-card color_5">
+          <div class="card_img">
+            <img
+              src="./assets/images/product_image/gratex-synthetics-pvt-curtain-fabric.jpeg"
+              alt="Stylish curtain and home décor fabric designed for elegant interiors by Gratex Synthetics Pvt. Ltd."
+            />
+          </div>
+          <div class="product-title">Curtain Fabric</div>
+          <div class="product-category">
+            Performance Fabrics for Athletes
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col product-item"
+      data-product="elastic"
+      data-material="nylon, polyester"
+      data-industry="footwear">
+      <a href="detail.html" class="text-decoration-none">
+        <div class="product-card color_6">
+          <div class="card_img">
+            <img
+              src="./assets/images/product_image/gratex-synthetics-pvt-shoefabric.png"
+              alt="High-performance shoe fabric created for long-lasting footwear by Gratex Synthetics Pvt. Ltd."
+            />
+          </div>
+          <div class="product-title">Shoes Fabric</div>
+          <div class="product-category">
+            Performance Fabrics for Athletes
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+  </div>
+</div>
+
       </div>
     </div>
 
@@ -464,6 +498,7 @@
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
+     <script src="./assets/js/filter.js"></script>
     <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
@@ -492,5 +527,6 @@
         },
       });
     </script>
+
   </body>
 </html>
