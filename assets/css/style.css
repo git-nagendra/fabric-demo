@@ -1,7 +1,7 @@
 /* Import Google Font Rubik */
 
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap");
 /* ================= ROOT VARIABLES ================= */
 :root {
   --color-primary: #e11d48; /* Accent / Pinkish red */
@@ -185,7 +185,6 @@ header {
 .card__hover a:hover {
   color: var(--color-primary);
 }
-
 
 /* Only the hovered card should stay clear */
 .card__hover:hover {
@@ -451,7 +450,7 @@ body.no-scroll {
   content: counter(menucount);
   position: fixed;
   left: -80px; /* adjust placement */
-  bottom: 0; /* fixed position */
+  bottom: 5px; /* fixed position */
   font-size: 20px;
   color: #ffffff; /* default color */
   font-weight: bold;
@@ -597,11 +596,13 @@ body.no-scroll {
 
 .has-submenu > .submenu {
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 100%; /* Open on right side */
   width: max-content; /* Auto size to content */
   white-space: nowrap;
   z-index: 999;
+  display: flex;
+  gap: 10px !important;
 
   /* Hidden state */
   opacity: 0;
@@ -628,6 +629,7 @@ body.no-scroll {
   padding: 0px 12px !important;
   color: #333;
   text-decoration: none;
+  font-size: 22px !important;
 }
 
 /* ================= BUTTONS ================= */
@@ -1181,7 +1183,8 @@ body.no-scroll {
     transform: none;
     font-size: 24px;
   }
-  .card-number{}
+  .card-number {
+  }
   .card_Technology .card-content {
     position: relative;
     flex-direction: column;
@@ -1281,7 +1284,8 @@ body.no-scroll {
 /* Section background and overlay */
 .hero-stats {
   position: relative;
-  background: url("../images/Gratex-Synthetics-Manufacturing_bg.png") center/cover no-repeat;
+  background: url("../images/Gratex-Synthetics-Manufacturing_bg.png")
+    center/cover no-repeat;
   background-attachment: fixed;
   color: #e5e7eb;
   padding: 6rem 0;
@@ -1899,7 +1903,8 @@ body.no-scroll {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../images/Textiles.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/Textiles.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2737,7 +2742,6 @@ body.no-scroll {
 }
 
 .loader {
-  
   color: #e01d47;
   position: fixed;
   top: 0;
@@ -3251,7 +3255,7 @@ body.no-scroll {
   border-radius: 8px;
   display: block;
 }
-.card-img img{
+.card-img img {
   height: 100%;
   width: 100%;
 }
@@ -3337,7 +3341,7 @@ body.no-scroll {
 }
 
 .quote-text {
-   font-weight: 400;
+  font-weight: 400;
   font-size: 15px;
   line-height: 26px;
   letter-spacing: 0.2px;
@@ -3374,7 +3378,7 @@ body.no-scroll {
   color: var(--color-primary);
   font-weight: 700;
   font-size: 1.125rem;
-   font-family: "Cedarville Cursive", cursive;
+  font-family: "Cedarville Cursive", cursive;
   font-style: normal;
 }
 
@@ -3392,4 +3396,100 @@ body.no-scroll {
     left: 0.75rem;
     font-size: 2rem;
   }
+}
+
+.title-inline {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #e11d48;
+}
+
+/* Line */
+.title-inline .line {
+  width: 45px;
+  height: 3px;
+  background: #e11d48;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+/* Perfect Round Circle */
+.title-inline .round-circle {
+  width: 14px;
+  height: 14px;
+  border: 3px solid #e11d48;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.product_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+/* Card */
+.product_card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  text-align: left;
+}
+
+.product_card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image */
+.product_card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+/* Text under image */
+.product_card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .product_card img {
+    height: 180px;
+  }
+
+  .title_text {
+    font-size: 24px;
+  }
+
+  .product_card h3 {
+    font-size: 14px;
+  }
+}
+
+.submenu .all_product_btn {
+  display: inline-block;
+  background: #c51134; /* red tone like your banner text */
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.submenu .all_product_btn a {
+  padding: 12px 28px !important;
+  font-size: 14px !important;
+}
+.submenu .all_product_btn a:hover {
+  background: #e01d47;
+  color: #fff;
+  border-radius: 6px;
 }
